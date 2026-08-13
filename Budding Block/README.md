@@ -6,4 +6,4 @@
 
 ### The loot tables are the exact same as the real Amethyst Cluster / Amethyst Buds.
 
-### [Video showcase](https://www.youtube.com/watch?v=p2L5286lHXo)
+### [Video showcase](https://www.youtube.com/watch?v=zCb3zzCi6yU)
