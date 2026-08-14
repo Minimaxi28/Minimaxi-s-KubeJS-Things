@@ -1,0 +1,9 @@
+{
+  "block.kubejs.budding": "Custom Budding Block",
+  "block.kubejs.cluster": "Custom Cluster",
+  "block.kubejs.large_bud": "Custom Large Bud",
+  "block.kubejs.medium_bud": "Custom Medium Bud",
+  "block.kubejs.small_bud": "Custom Small Bud",
+  "block.kubejs.block": "Custom Block",
+  "item.kubejs.shard": "Custom Shard"
+}
