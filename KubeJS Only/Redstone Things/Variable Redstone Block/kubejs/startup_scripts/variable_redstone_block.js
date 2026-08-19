@@ -23,7 +23,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useItemOn to only allow right click with empty hand
-    useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
+    useItemOn: function(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
       if(!itemStack.isEmpty()) {
         return $ItemInteractionResult.CONSUME
       }

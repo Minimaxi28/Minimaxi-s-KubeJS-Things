@@ -46,7 +46,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useItemOn to only allow right click with empty hand
-    useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
+    useItemOn: function(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
       if(!itemStack.isEmpty()) {
         return $ItemInteractionResult.CONSUME
       }
@@ -54,7 +54,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useWithoutItem to implement the logic of the block
-    useWithoutItem(blockState, level, blockPos, player, blockHitResult) {
+    useWithoutItem: function(blockState, level, blockPos, player, blockHitResult) {
       if(player.isShiftKeyDown()) {
         // if the player is sneaking, cycle the instrument up to flute (6th instrument) then reset to harp (1st instrument)
         if(blockState.getValue($BlockStateProperties.NOTEBLOCK_INSTRUMENT) == $NoteBlockInstrument.FLUTE) {
