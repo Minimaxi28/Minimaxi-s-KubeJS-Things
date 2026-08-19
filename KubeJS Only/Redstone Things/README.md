@@ -1,0 +1,3 @@
+### `Variable Redstone Block` adds a block that acts as a redstone block with variable signal strength. It can be right click to cycle it's signal strength (sneak + right-click cycles backwards). [Video showcase](https://www.youtube.com/watch?v=PGkzRr02880)
+
+### `Variable Directional Redstone Block` adds a block that acts as a redstone block with variable signal strength and only in one of the 6 directions  adds a block that can be right click to cycle it's signal strength and sneak + right-click will (sneak + right-click cycles backwards). [Video showcase](https://www.youtube.com/watch?v=pCLXYQPtbww)

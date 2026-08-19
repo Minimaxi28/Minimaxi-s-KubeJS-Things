@@ -72,12 +72,11 @@ const CUSTOM_SOUNDTYPE = new $SoundType(
 // To use, replace anywhere in a script where it's written `$SoundType.XXX` with `CUSTOM_SOUNDTYPE`
 // (you replace the whole thing, not just the `XXX`)
 ```
-You can also mix with already existing SoundEvent(s), see [Custom SoundType using already existing SoundEvent(s)](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/wiki/1.21.1#custom-soundtype-using-already-existing-soundevents)
-
+You can also mix those custom SoundEvent(s) with already existing SoundEvent(s), see [Custom SoundType using already existing SoundEvent(s)](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/wiki/1.21.1#custom-soundtype-using-already-existing-soundevents)
 
 You then put your custom sound(s) (in the `.ogg` format) in `kubejs\assets\kubejs\sounds` (can also be in sub-folders).
 
-You then create a `sounds.json` file in `kubejs\assets\kubejs` which should something look like this :
+You then create a `sounds.json` file in `kubejs\assets\kubejs` which should look something like this :
 
 ```json
 {
