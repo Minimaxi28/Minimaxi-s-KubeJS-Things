@@ -7,6 +7,7 @@ StartupEvents.registry('block', event => {
   let $InteractionResult = Java.loadClass("net.minecraft.world.InteractionResult")
   let $BlockStateProperties = Java.loadClass("net.minecraft.world.level.block.state.properties.BlockStateProperties")
   let $BlockBehaviourProperties = Java.loadClass("net.minecraft.world.level.block.state.BlockBehaviour$Properties")
+  let $SoundType = Java.loadClass("net.minecraft.world.level.block.SoundType")
 
   // As KubeJS cannot createCustom a block with custom blockStates,
   // I am using SugarCaneBlock to get 16 block states (AGE_15),
