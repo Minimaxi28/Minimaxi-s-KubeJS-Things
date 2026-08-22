@@ -28,6 +28,7 @@ StartupEvents.registry('block', event => {
         level[playSound](null, blockPos, $SoundEvents.SPONGE_ABSORB, $SoundSource.BLOCKS, 1.0, 1.0);
       }
     },
+    // override removeWaterBreadthFirstSearch and change breadthFirstTraversal to make the custom behaviour of the sponge
     removeWaterBreadthFirstSearch: function(level, blockPos) {
       return $BlockPos.breadthFirstTraversal(
         blockPos,
