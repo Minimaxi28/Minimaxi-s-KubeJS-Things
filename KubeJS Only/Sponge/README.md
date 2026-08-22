@@ -1,6 +1,6 @@
 ### `Sponge` adds a custom Sponge block that will absorb every fluid but can be configured to absorb anything you want (see below). 
 
-[Video showcase](https://www.youtube.com/watch?v=GMzQVETU62A)
+[Video showcase](https://www.youtube.com/watch?v=xBRg7NmpQwE)
 
 ## Examples of configuration
 
