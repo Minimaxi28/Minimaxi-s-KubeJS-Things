@@ -9,6 +9,7 @@
 - `PUSH_ONLY` block can be pushed but not pulled
 
 ---
+
 # SoundType
 
 ## All available SoundType(s) are listed [here](https://mcsrc.dev/1/1.21.1/net/minecraft/world/level/block/SoundType)
@@ -108,3 +109,22 @@ You then create a `sounds.json` file in `kubejs\assets\kubejs` which should look
 The objects in the `"sounds"` array can contain many different things, see the [Minecraft Wiki](https://minecraft.wiki/w/Sounds.json) which lists them all. Also see the [Minecraft Assets Explorer website](https://mcasset.cloud/1.21.1/assets/minecraft/sounds.json) which hosts the `sounds.json` file used by Minecraft.
 
 Don't forget to put the full path to the `.ogg` file if you put it in a sub-folder `"sounds": ["kubejs:folder_1/folder_2/sound_file_name"]` (file path would be `kubejs/assets/kubejs/sounds/folder_1/folder_2/sound_file_name.ogg`).
+
+---
+
+### SoundSource
+
+### There are 10 available SoundSource(s)
+
+They each correspond to their respective slider in `Options... > Music & Sounds...`
+
+- `MASTER` Master Volume
+- `MUSIC` Music
+- `RECORDS` Jukebox/Note Blocks
+- `WEATHER` Weather
+- `BLOCKS` Blocks
+- `HOSTILE` Hostile Creatures
+- `NEUTRAL` Friendly Creatures
+- `PLAYERS` Players
+- `AMBIENT` Ambient/Envisonment
+- `VOICE` Voice/Speech

@@ -2,8 +2,6 @@ StartupEvents.registry('block', event => {
   let $NoteBlock = Java.loadClass("net.minecraft.world.level.block.NoteBlock")
   let $BlockBehaviourProperties = Java.loadClass("net.minecraft.world.level.block.state.BlockBehaviour$Properties")
   let $Direction = Java.loadClass("net.minecraft.core.Direction")
-  let $Block = Java.loadClass("net.minecraft.world.level.block.Block")
-  let $Blocks = Java.loadClass("net.minecraft.world.level.block.Blocks")
   let $InteractionResult = Java.loadClass("net.minecraft.world.InteractionResult")
   let $ItemInteractionResult = Java.loadClass("net.minecraft.world.ItemInteractionResult")
   let $NoteBlockInstrument = Java.loadClass("net.minecraft.world.level.block.state.properties.NoteBlockInstrument")
@@ -39,10 +37,10 @@ StartupEvents.registry('block', event => {
 
     // override getStateForPlacement to make the block place like a piston
     getStateForPlacement: function(blockPlaceContext) {
-    let direction = blockPlaceContext.getNearestLookingDirection().getOpposite();
-    let ordinal = FACING_BY_ORDINAL.indexOf(direction);
-    let instrument = $NoteBlockInstrument.values()[ordinal];
-    return this.defaultBlockState().setValue($BlockStateProperties.NOTEBLOCK_INSTRUMENT, instrument);
+      let direction = blockPlaceContext.getNearestLookingDirection().getOpposite();
+      let ordinal = FACING_BY_ORDINAL.indexOf(direction);
+      let instrument = $NoteBlockInstrument.values()[ordinal];
+      return this.defaultBlockState().setValue($BlockStateProperties.NOTEBLOCK_INSTRUMENT, instrument);
     },
 
     // override useItemOn to only allow right click with empty hand
