@@ -1,0 +1,21 @@
+{
+	"textures": {
+    "base": "kubejs:block/directional_variable_redstone_block_base",
+		"powered_texture": "kubejs:block/directional_variable_redstone_block_7",
+		"particle": "kubejs:block/directional_variable_redstone_block_7"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#powered_texture"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#base"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#base"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#base"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#base"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#base"}
+			}
+		}
+	]
+}
