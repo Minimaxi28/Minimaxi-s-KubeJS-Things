@@ -20,7 +20,7 @@ StartupEvents.registry('block', event => {
 
   event.createCustom("kubejs:directional_variable_redstone_block", () => new JavaAdapter($NoteBlock, {
     // overrides to remove the NoteBlock's code
-    neighborChanged: function(blockState, level, blockPos, block, blockPos2, bl) {
+    neighborChanged(blockState, level, blockPos, block, blockPos2, bl) {
       return;
     },
     updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2) {
@@ -31,12 +31,12 @@ StartupEvents.registry('block', event => {
     },
 
     // override isSignalSource to make redstone connect to the block
-    isSignalSource: function(blockState) {
+    isSignalSource(blockState) {
       return true;
     },
 
     // override getStateForPlacement to make the block place like a piston
-    getStateForPlacement: function(blockPlaceContext) {
+    getStateForPlacement(blockPlaceContext) {
       let direction = blockPlaceContext.getNearestLookingDirection().getOpposite();
       let ordinal = FACING_BY_ORDINAL.indexOf(direction);
       let instrument = $NoteBlockInstrument.values()[ordinal];
@@ -44,7 +44,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useItemOn to only allow right click with empty hand
-    useItemOn: function(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
+    useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
       if(!itemStack.isEmpty()) {
         return $ItemInteractionResult.CONSUME
       }
@@ -52,7 +52,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useWithoutItem to implement the logic of the block
-    useWithoutItem: function(blockState, level, blockPos, player, blockHitResult) {
+    useWithoutItem(blockState, level, blockPos, player, blockHitResult) {
       if(player.isShiftKeyDown()) {
         // if the player is sneaking, cycle the instrument up to flute (6th instrument) then reset to harp (1st instrument)
         if(blockState.getValue($BlockStateProperties.NOTEBLOCK_INSTRUMENT) == $NoteBlockInstrument.FLUTE) {
@@ -74,7 +74,7 @@ StartupEvents.registry('block', event => {
     
     // override getSignal to only output in the right direction based on the instrument
     // and output the right signal strength based on the note
-    getSignal: function(blockState, blockGetter, blockPos, direction) {
+    getSignal(blockState, blockGetter, blockPos, direction) {
       let ordinal = blockState.getValue($BlockStateProperties.NOTEBLOCK_INSTRUMENT).ordinal();
       return FACING_BY_ORDINAL[ordinal] === direction.getOpposite() ? blockState.getValue($BlockStateProperties.NOTE) : 0;
     }

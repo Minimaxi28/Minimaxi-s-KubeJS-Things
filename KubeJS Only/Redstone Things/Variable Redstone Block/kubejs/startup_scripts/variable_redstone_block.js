@@ -19,12 +19,12 @@ StartupEvents.registry('block', event => {
     },
     
     // override canSurvive so it can be placed anywhere
-    canSurvive: function(blockState, levelReader, blockPos) {
+    canSurvive(blockState, levelReader, blockPos) {
       return true;
     },
 
     // override useItemOn to only allow right click with empty hand
-    useItemOn: function(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
+    useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult) {
       if(!itemStack.isEmpty()) {
         return $ItemInteractionResult.CONSUME
       }
@@ -32,7 +32,7 @@ StartupEvents.registry('block', event => {
     },
 
     // override useWithoutItem to implement the logic of the block
-    useWithoutItem: function(blockState, level, blockPos, player, blockHitResult) {
+    useWithoutItem(blockState, level, blockPos, player, blockHitResult) {
       if(player.isShiftKeyDown()) {
         // make it so sneak + right click cycles backwards
         let age = blockState.getValue($BlockStateProperties.AGE_15);
@@ -52,12 +52,12 @@ StartupEvents.registry('block', event => {
     },
 
     // override getSignal to make it output a redstone signal based on the AGE block state
-    getSignal: function(blockState, blockGetter, blockPos, direction) {
+    getSignal(blockState, blockGetter, blockPos, direction) {
       return blockState.getValue($BlockStateProperties.AGE_15);
     },
 
     // override isSignalSource to make redstone connect to the block
-    isSignalSource: function(blockState) {
+    isSignalSource(blockState) {
       return true;
     }
   },
