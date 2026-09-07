@@ -7,3 +7,4 @@
   - [Budding Block](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.20.1/KubeJS%20Only/Budding%20Block)
   - [Variable Redstone Block](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.20.1/KubeJS%20Only/Redstone%20Things/Variable%20Redstone%20Block)
   - [Variable Directional Redstone Block](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.20.1/KubeJS%20Only/Redstone%20Things/Variable%20Directional%20Redstone%20Block)
+  - [Banner Pattern](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.20.1/KubeJS%20Only/Banner%20Pattern)
