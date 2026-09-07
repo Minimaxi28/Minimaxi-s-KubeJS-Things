@@ -16,7 +16,10 @@ StartupEvents.registry('banner_pattern', event => {
   let $BannerPattern = Java.loadClass('net.minecraft.world.level.block.entity.BannerPattern')
 
   banners.forEach(bannerName => {
-    event.createCustom(`${namespace}:${bannerName}`, () => new $BannerPattern(bannerName))
+    event.createCustom(`${namespace}:${bannerName}`, () => new $BannerPattern(
+    $ResourceLocation.fromNamespaceAndPath(namespace, bannerName),
+    `tooltip.${namespace}.banner.${bannerName}`
+  ))
   })
 })
 
@@ -34,6 +37,6 @@ StartupEvents.registry('item', event => {
       // optionaly, add .rarity($Rarity.COMMON) or .rarity($Rarity.UNCOMMON) or .rarity($Rarity.RARE) or .rarity($Rarity.EPIC) 
       // after .stacksTo(1) to make the the name of the item colored
       // i.e. new $Item$Properties().stacksTo(1).rarity($Rarity.COMMON)
-      // you have to add "let $Rarity = Java.loadClass('net.minecraft.world.item.Rarity')" with the other ones
+      // you have to let $Rarity = Java.loadClass('net.minecraft.world.item.Rarity')
   })
 })
