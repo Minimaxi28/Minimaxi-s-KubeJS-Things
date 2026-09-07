@@ -8,3 +8,4 @@
   - [Variable Redstone Block](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.21.1/KubeJS%20Only/Redstone%20Things/Variable%20Redstone%20Block)
   - [Variable Directional Redstone Block](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.21.1/KubeJS%20Only/Redstone%20Things/Variable%20Directional%20Redstone%20Block)
   - [Sponge](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.21.1/KubeJS%20Only/Sponge)
+  - [Sponge](https://github.com/Minimaxi28/Minimaxi-s-KubeJS-Things/tree/1.21.1/KubeJS%20Only/Banner%20Pattern)
