@@ -37,6 +37,6 @@ StartupEvents.registry('item', event => {
       // optionaly, add .rarity($Rarity.COMMON) or .rarity($Rarity.UNCOMMON) or .rarity($Rarity.RARE) or .rarity($Rarity.EPIC) 
       // after .stacksTo(1) to make the the name of the item colored
       // i.e. new $Item$Properties().stacksTo(1).rarity($Rarity.COMMON)
-      // you have to let $Rarity = Java.loadClass('net.minecraft.world.item.Rarity')
+      // you have to add "let $Rarity = Java.loadClass('net.minecraft.world.item.Rarity')" with the other ones
   })
 })
